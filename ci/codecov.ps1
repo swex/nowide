@@ -39,7 +39,7 @@ mkdir __out
 
 $ErrorActionPreference = "Continue"
 OpenCppCoverage.exe --export_type cobertura:__out/cobertura.xml `
-    --sources "${env:BOOST_ROOT}" --modules "${env:BOOST_ROOT}" `
+    --sources "${env:BOOST_ROOT}\libs\${env:SELF}" --modules "${env:BOOST_ROOT}" `
     <# Lines marked with LCov or coverity exclusion comments #>`
     --excluded_line_regex '.*// LCOV_EXCL_LINE' `
     --excluded_line_regex '.*// coverity\[dead_error_line\]' `
